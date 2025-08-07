@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int mat[3][3], sum1 = 0, sum2 = 0;
+
+    cout << "Enter elements of 3x3 matrix:\n";
+    for (int i = 0; i < 3; i++)
+        for (int j = 0; j < 3; j++)
+            cin >> mat[i][j];
+
+    for (int i = 0; i < 3; i++) {
+        sum1 += mat[i][i];
+        sum2 += mat[i][2 - i];
+    }
+
+    cout << "Primary Diagonal Sum = " << sum1 << endl;
+    cout << "Secondary Diagonal Sum = " << sum2 << endl;
+    return 0;
+}
